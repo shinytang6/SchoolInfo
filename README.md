@@ -1,17 +1,64 @@
-## 校园信息平台
-###
+# 校园信息平台
+##
+
+## 技术栈
+
+### 前端
+
+* 语言： HTML/CSS/JavaScript
+* 框架： Vue.js
+* 环境： NPM 
+
+NPM是个包管理软件，只在用Vue下载依赖包时用到，安装很简单
+
+具体安装教程见： [https://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html](https://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html)
+
+
+### 后端
+
+* 语言： PHP
+* 框架： Laravel
+* 环境： Apache/PHP/MySql 	
+
+## 使用说明
+
+#### 前端和后端分别运行在两个不同的端口
+
+前端代码：
+
+	# download
+	git clone https://github.com/shinytang6/SchoolInfo
+
+	# change directory
+	cd fontend
+
+	# install dependencies
+	npm install
+
+	# serve with hot reload at localhost:8080
+	npm run dev
+
+后端代码：
+	
+	启动Apache服务器即可
 
 ## 功能
 
-- [x] 首页推荐
-- [x] 书籍详情
-- [x] 相似推荐
-- [x] 分类查看 
-- [x] 阅读器 
-- [x] 章节跳转
-- [x] 更改字体
-- [x] 更换主题
-- [x] 夜间模式
+> 这是最需要完成的一些功能
+
+#### 用户
+
+- [x] 登录jaacount
+- [x] 用户注册
+- [x] 关注活动
+- [x] 取消关注
+- [x] 查看关注活动 
+- [x] 系统推送活动
+- [x] 评论
+- [x] 活动搜索
 - [x] 翻页浏览
-- [x] 本地存储（存储每本书的阅读进度）
-- [ ] 书架（待考虑）
+
+#### 管理员
+
+- [x] 储存用户信息
+- [x] 发布活动信息
