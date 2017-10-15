@@ -28,6 +28,14 @@ PHP在w3cschool上也有详细教程 [http://www.w3school.com.cn/](http://www.w3
 
 Laravel我觉得看官方教程就行 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
 
+### 代码管理
+
+使用老师推荐的Git
+
+文档可以看这个  [https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
+但基本里面常用的命令只有五六条
+
 ## 使用说明
 
 #### 前端和后端分别运行在两个不同的端口
