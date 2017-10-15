@@ -26,7 +26,7 @@ NPM是个包管理软件，只在用Vue下载依赖包时用到，安装很简�
 
 PHP在w3cschool上也有详细教程 [http://www.w3school.com.cn/](http://www.w3school.com.cn/)
 
-Laravel我觉得看官方教程就行 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
+Laravel我觉得看官方教程就行了，之前也没接触过有好的教程大家可以推荐 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
 
 ### 代码管理
 
