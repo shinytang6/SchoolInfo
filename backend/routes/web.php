@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +13,8 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('api/user', function () {
+    $user = new App\User;
+    return $user->signup();
 });

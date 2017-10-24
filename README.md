@@ -7,7 +7,7 @@
 
 * 语言： HTML/CSS/JavaScript
 * 框架： Vue.js（这里因为要快速开发，使用了vue-cli这个脚手架）
-* 环境： NPM 
+* 环境： Node(npm)
 
 HTML/CSS/JavaScript的学习，在 [http://www.w3school.com.cn/](http://www.w3school.com.cn/)上有详细的教程
 
@@ -26,7 +26,7 @@ NPM是个包管理软件，只在用Vue下载依赖包时用到，安装很简�
 
 PHP在w3cschool上也有详细教程 [http://www.w3school.com.cn/](http://www.w3school.com.cn/)
 
-Laravel我觉得看官方教程就行了，之前也没接触过有好的教程大家可以推荐 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
+Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
 
 ### 代码管理
 
@@ -56,7 +56,8 @@ Laravel我觉得看官方教程就行了，之前也没接触过有好的教程�
 
 后端代码：
 	
-	启动Apache服务器即可
+	cd 目录
+	php -s localhost + 端口
 
 ## 功能
 
