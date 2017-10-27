@@ -1,5 +1,4 @@
 # 校园信息平台
-##
 
 ## 技术栈
 
@@ -27,6 +26,23 @@ NPM是个包管理软件，只在用Vue下载依赖包时用到，安装很简�
 PHP在w3cschool上也有详细教程 [http://www.w3school.com.cn/](http://www.w3school.com.cn/)
 
 Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
+
+##### 修改数据库
+	
+	DB_CONNECTION=mysql
+	DB_HOST=127.0.0.1
+	DB_PORT=3306
+	DB_DATABASE=your database
+	DB_USERNAME=root
+	DB_PASSWORD=your password
+
+##### 数据库迁移
+
+	php artisan migrate
+
+##### 数据库回滚
+
+	php artisan migrate：rollback
 
 ### 代码管理
 
@@ -56,8 +72,8 @@ Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs
 
 后端代码：
 	
-	cd 目录
-	php -s localhost + 端口
+	cd 目录 (public目录下)
+	php -S localhost:端口
 
 ## 功能
 
