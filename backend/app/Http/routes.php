@@ -20,9 +20,14 @@ Route::get('/api', function () {
     return $user->signup();
 });
 
-Route::group(['prefix' => 'api'], function () {
+Route::group(['prefix' => 'user'], function () {
     Route::get('signup',"UserController@signup");
     Route::get('login',"UserController@login");
     Route::get('logout',"UserController@logout");
-    Route::get('test',"UserController@test");
+    Route::get('test',"BaseController@isLogin");
+});
+
+Route::group(['prefix' => 'activity'], function () {
+    Route::get('add',"ActivityController@add");
+
 });

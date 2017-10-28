@@ -7,7 +7,7 @@ use Illuminate\Routing\Controller;
 use App\User;
 use Hash;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
     /**
      * 更新指定用户
@@ -102,11 +102,5 @@ class UserController extends Controller
        return ["status" => 1,"msg" => "loginout succeed"];
     }
 
-    /** 
-        注销api
-     */
-    public function test(Request $request){
-        dd(session()->all());
-      // return $request->session("user_id")?:"false";
-    }
+ 
 }
