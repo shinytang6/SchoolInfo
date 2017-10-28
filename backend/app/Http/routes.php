@@ -14,4 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('user/{id}','UserController@update');
+
+Route::get('/api', function () {
+    $user = new App\User;
+    return $user->signup();
+});
+
+Route::group(['prefix' => 'api'], function () {
+    Route::get('user',"UserController@signup");
+});
