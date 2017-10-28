@@ -21,5 +21,8 @@ Route::get('/api', function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
-    Route::get('user',"UserController@signup");
+    Route::get('signup',"UserController@signup");
+    Route::get('login',"UserController@login");
+    Route::get('logout',"UserController@logout");
+    Route::get('test',"UserController@test");
 });
