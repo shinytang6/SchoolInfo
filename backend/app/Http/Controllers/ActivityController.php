@@ -26,7 +26,7 @@ class ActivityController extends BaseController
         }
     }
 
-     /** 
+    /** 
         更新活动
      */
     public function update(Request $request){
@@ -55,5 +55,26 @@ class ActivityController extends BaseController
         } else {
             return ["status" => 0,"msg" => "You need to login first"];
         }
+    }
+
+    /** 
+        查看活动
+     */
+    public function read(Request $request){
+        // 根据传上来的查询参数id返回对应活动
+        if($id = $request->id){
+            $activity = Activity::find($id);
+            if($activity)
+                return  ["status" => 1,"data" => $activity];
+            else
+                return ["status" => 0,"msg" =>"No that activity"];
+        } else {
+            // 根据参数page显示页面
+            if( $page = $request->page)
+                return ["status" => 1,"data" => Activity::take(10)->skip(($page-1)*10)->get()];
+            else
+                return ["status" => 1,"data" => Activity::take(10)->get()];
+        }
+
     }
 }
