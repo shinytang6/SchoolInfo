@@ -15,20 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/api', function () {
-    $user = new App\User;
-    return $user->signup();
-});
+Route::get('test',"BaseController@isLogin");
 
-Route::group(['prefix' => 'user'], function () {
+Route::group(['prefix' => 'api/user'], function () {
     Route::get('signup',"UserController@signup");
     Route::get('login',"UserController@login");
     Route::get('logout',"UserController@logout");
-    Route::get('test',"BaseController@isLogin");
 });
 
-Route::group(['prefix' => 'activity'], function () {
+Route::group(['prefix' => 'api/activity'], function () {
     Route::get('add',"ActivityController@add");
     Route::get('update',"ActivityController@update");
     Route::get('read',"ActivityController@read");
+    Route::get('remove',"ActivityController@remove");
 });

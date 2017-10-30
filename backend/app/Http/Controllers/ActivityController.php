@@ -77,4 +77,34 @@ class ActivityController extends BaseController
         }
 
     }
+
+     /** 
+        删除活动
+     */
+    public function remove(Request $request){
+        if($this->isLogin()) {
+            $id = $request->id;
+            if (!$id)
+                return ["status" => 0,"msg" => "Id is needed"];
+            // 根据参数id查找对应的活动
+            $activity = Activity::find($id);
+
+            // 检查活动是否存在
+            if(!$activity)
+                return ["status" => 0,"msg" => "Activity not exists"];
+
+            // 检查该活动的创建用户是否与当前用户一致，否则无权限
+            if($activity->user_id == session("user_id")){
+                return $activity->delete()?
+                    ["status" => 1,"msg" => "Remove succeed"]:
+                    ["status" => 0,"msg" => "db insert failed"];;
+            }
+            else{
+                return ["status" => 0,"msg" => "You don't have the access to delete this question"];
+            }
+        } else {
+            return ["status" => 0,"msg" => "You need to login first"];
+        }
+
+    }
 }
