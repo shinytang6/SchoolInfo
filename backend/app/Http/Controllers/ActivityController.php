@@ -39,7 +39,7 @@ class ActivityController extends BaseController
             if(!$activity)
                 return ["status" => 0,"msg" => "Activity not exists"];
 
-            // 检查该活动的创建用户是否与当前用户一致，否则无权限
+            // 检查该活动的创建用户是否与当前用户一致，否则无权限更新
             if($activity->user_id == session("user_id")){
                 if($request->title)
                     $activity->title = $request->title;
@@ -93,7 +93,7 @@ class ActivityController extends BaseController
             if(!$activity)
                 return ["status" => 0,"msg" => "Activity not exists"];
 
-            // 检查该活动的创建用户是否与当前用户一致，否则无权限
+            // 检查该活动的创建用户是否与当前用户一致，否则无权限删除
             if($activity->user_id == session("user_id")){
                 return $activity->delete()?
                     ["status" => 1,"msg" => "Remove succeed"]:
