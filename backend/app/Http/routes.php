@@ -29,5 +29,5 @@ Route::group(['prefix' => 'user'], function () {
 
 Route::group(['prefix' => 'activity'], function () {
     Route::get('add',"ActivityController@add");
-
+    Route::get('update',"ActivityController@update");
 });
