@@ -21,6 +21,22 @@ Route::group(['prefix' => 'api/user'], function () {
     Route::get('signup',"UserController@signup");
     Route::get('login',"UserController@login");
     Route::get('logout',"UserController@logout");
+    // 个人详情路由
+    Route::get('detail/home',"UserController@detailHome");
+    Route::get('detail/activity',"UserController@detailActivity");
+
+    // 修改个人信息操作
+    Route::get('modify/message',"UserController@modifyMessage");
+    Route::get('modify/password',"UserController@modifyPassword");
+
+
+
+});
+
+Route::group(['prefix' => 'api/admin'], function () {
+    Route::get('login',"AdminController@login");
+    Route::get('logout',"AdminController@logout");
+    Route::get('check',"AdminController@check");
 });
 
 Route::group(['prefix' => 'api/activity'], function () {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\User;
+use App\Activity;
 use Hash;
 
 class UserController extends BaseController
@@ -101,6 +102,70 @@ class UserController extends BaseController
        $request->session()->flush();
        return ["status" => 1,"msg" => "loginout succeed"];
     }
+
+    /** 
+        查看用户基本信息
+     */
+    public function detailHome(Request $request){
+      $user_id = session("user_id");
+      return User::where('id', $user_id)->get();
+    }
+
+    /** 
+        查看用户参加的活动
+     */
+    public function detailActivity(Request $request){
+      $user_id = session("user_id");
+      return Activity::where('user_id', $user_id)->get();
+    }
+
+    /** 
+        修改基本信息
+     */
+    public function modifyMessage(Request $request){
+      $user_id = session("user_id");
+      $user = User::where('id', $user_id)->first(["username"]);
+      dd($user->username);
+      if($username = $request->username){
+         $user->username = $username;
+      }
+      if($email = $request->email){
+         $user->email = $email;
+      }
+      if($phone = $request->phone){
+         $user->phone = $phone;
+      }
+      if($avatar_url = $request->avatar_url){
+         $user->avatar_url = $avatar_url;
+      }
+      if($intro = $request->intro){
+         $user->intro = $intro;
+      }
+
+      return $user->save()? 
+            ["status" => 1,"msg" => "Modify user basic information succeed"]:
+            ["status" => 0,"msg" => "db save failed"]; 
+    }
+
+    /** 
+        修改密码
+     */
+    public function modifyPassword(Request $request){
+      $user_id = session("user_id");
+      $old_psw = $request->old_psw;
+      $new_psw = $request->new_psw;
+      $user = User::where('id', $user_id)->first();
+      if (!Hash::check($old_psw, $user->password))
+        return ["status" => 0,"msg" => "old password is wrong"]; 
+      else {
+        $user->password = $old_psw;
+        return $user->save()? 
+            ["status" => 1,"msg" => "Modify password succeed"]:
+            ["status" => 0,"msg" => "db save failed"]; 
+      }
+    }
+
+
 
  
 }
