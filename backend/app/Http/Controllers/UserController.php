@@ -98,7 +98,7 @@ class UserController extends BaseController
         注销api
      */
     public function logout(Request $request){
-        // dd(session()->all());s
+        // dd(session()->all());
        $request->session()->flush();
        return ["status" => 1,"msg" => "loginout succeed"];
     }

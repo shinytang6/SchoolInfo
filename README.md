@@ -60,13 +60,13 @@ Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs
 
 常用的命令：
 	
-	git clone 地址   # 克隆远程代码到本地	
+	git clone 地址   // 克隆远程代码到本地	
 
-	git pull     # 同步远程代码到本地
+	git pull     // 同步远程代码到本地
 	
-	git add --all 	 # 将代码推到本地仓库
-	git commit -m "描述操作"		# 添加描述
-	git push origin master		# 将本地仓库代码推到远程仓库
+	git add --all 	 // 将代码推到本地仓库
+	git commit -m "描述操作"		// 添加描述
+	git push origin master		// 将本地仓库代码推到远程仓库
 
 ## 使用说明
 
@@ -88,6 +88,7 @@ Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs
 
 后端代码：
 	
+	// 确保之前已经完成安装依赖包以及生成app_key
 	cd 目录 (public目录下)
 	php -S localhost:端口
 
