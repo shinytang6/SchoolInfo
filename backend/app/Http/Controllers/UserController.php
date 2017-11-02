@@ -125,7 +125,6 @@ class UserController extends BaseController
     public function modifyMessage(Request $request){
       $user_id = session("user_id");
       $user = User::where('id', $user_id)->first(["username"]);
-      dd($user->username);
       if($username = $request->username){
          $user->username = $username;
       }

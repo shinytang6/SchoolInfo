@@ -27,6 +27,14 @@ PHP在w3cschool上也有详细教程 [http://www.w3school.com.cn/](http://www.w3
 
 Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs-5_2](http://laravelacademy.org/laravel-docs-5_2)
 
+##### 依赖包安装
+
+	composer install
+
+##### 生成app_key
+
+	php artisan key:generate(需先将.env.example改为.env) 
+
 ##### 修改数据库
 	
 	DB_CONNECTION=mysql
@@ -50,7 +58,15 @@ Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs
 
 文档可以看这个  [https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
-但基本里面常用的命令只有五六条
+常用的命令：
+	
+	git clone 地址   # 克隆远程代码到本地	
+
+	git pull     # 同步远程代码到本地
+	
+	git add --all 	 # 将代码推到本地仓库
+	git commit -m "描述操作"		# 添加描述
+	git push origin master		# 将本地仓库代码推到远程仓库
 
 ## 使用说明
 
@@ -82,10 +98,10 @@ Laravel我觉得看官方教程就行了 [http://laravelacademy.org/laravel-docs
 #### 用户
 
 - [ ] 登录jaacount
-- [ ] 用户注册
+- [x] 用户注册
 - [ ] 关注活动
 - [ ] 取消关注
-- [ ] 查看关注活动 
+- [x] 查看关注活动 
 - [ ] 系统推送活动
 - [ ] 评论
 - [ ] 活动搜索
